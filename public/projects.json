@@ -1,0 +1,66 @@
+[
+  {
+    "id": 1,
+    "projectName": "Medicart",
+    "projectImage": "https://i.ibb.co/qL7nMxY3/Screenshot-2025-08-08-125107.png",
+    "detailsPageUrl": "https://illustrious-pudding-bb0b01.netlify.app/",
+    "mainTechnologyStack": ["React.js", "Firebase", "Tailwind CSS"],
+    "briefDescription": "Medicart is a multi-vendor e-commerce platform specializing in medicine sales with role-based access for admin, sellers, and users. Features secure payments via Stripe and extensive admin management tools.",
+    "liveProjectLink": "https://illustrious-pudding-bb0b01.netlify.app/",
+    "githubClientLink": "https://github.com/nipaayasha05/medicine-selling-e-commerce-website",
+    "challengesFaced": [
+      "Implementing role-based access control to separate admin, seller, and user functionalities securely.",
+      "Integrating Stripe for live payment processing and ensuring secure transactions.",
+      "Managing real-time cart updates and synchronizing inventory changes.",
+      "Generating printable and downloadable invoices after payment completion.",
+      "Handling category image uploads and admin controls efficiently."
+    ],
+    "potentialImprovements": [
+      "Implement more advanced analytics and sales reports for admins and sellers.",
+      "Add real-time chat support between buyers and sellers.",
+
+      "Introduce product recommendation engine based on user behavior."
+    ]
+  },
+  {
+    "id": 2,
+    "projectName": "FleetGo",
+    "projectImage": "https://i.ibb.co.com/x821JnF8/Screenshot-2025-08-12-015156.png",
+    "detailsPageUrl": "https://sprightly-moonbeam-219a97.netlify.app/",
+    "mainTechnologyStack": ["React.js", "Firebase", "Tailwind CSS"],
+    "briefDescription": "FleetGo is a comprehensive car rental platform allowing users to browse cars, book with real-time availability, and manage bookings with ease.",
+    "liveProjectLink": "https://sprightly-moonbeam-219a97.netlify.app/",
+    "githubClientLink": "https://github.com/nipaayasha05/car-rental-project",
+    "challengesFaced": [
+      "Implementing real-time availability updates to prevent overbooking.",
+      "Handling date selection and validation for pickup and return dates carefully.",
+      "Add multi-language support for wider audience."
+    ],
+    "potentialImprovements": [
+      "Add payment gateway integration for instant payments.",
+
+      "Enhance admin dashboard with detailed analytics.",
+
+      "Add multi-language support for wider audience."
+    ]
+  },
+  {
+    "id": 3,
+    "projectName": "GreenSpire",
+    "projectImage": "https://i.ibb.co.com/fYt4sn02/Screenshot-2025-08-12-015005.png",
+    "detailsPageUrl": "https://dancing-unicorn-47edd5.netlify.app/",
+    "mainTechnologyStack": [
+      "React.js",
+      "Firebase Authentication",
+      "Tailwind CSS"
+    ],
+    "briefDescription": "GreenSpire is a gardening website where users can share blogs, explore top gardeners, top blogs, and plant of the month with easy blog management.",
+    "liveProjectLink": "https://dancing-unicorn-47edd5.netlify.app/",
+    "githubClientLink": "https://github.com/nipaayasha05/garden-10",
+    "challengesFaced": [
+      "Building a dynamic blog system with create, update, and delete functionality.",
+      "Managing real-time updates for active gardeners and top blog listings."
+    ],
+    "potentialImprovements": ["Add social sharing and commenting on blogs."]
+  }
+]
