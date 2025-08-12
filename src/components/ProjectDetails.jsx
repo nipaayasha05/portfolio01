@@ -11,7 +11,7 @@ const ProjectDetails = () => {
   return (
     <div>
       {" "}
-      <div className="container  text-white  mx-auto py-10">
+      <div className="container flex items-center text-white  mx-auto pt-10">
         <div className=" m-5 flex bg-gray-800 flex-col lg:flex-row justify-center items-center shadow-gray-600  shadow-md p-5 rounded-xl space-y-5 lg:gap-10">
           <div className="flex-1">
             <img
@@ -20,7 +20,7 @@ const ProjectDetails = () => {
               alt=""
             />
           </div>
-          <div className="flex-1 text-start space-y-2 lg::w-3xl    ">
+          <div className="flex-1 text-sky-100 text-start space-y-2 lg::w-3xl    ">
             <p>
               <strong>Project Name : </strong>
               {project.projectName}
@@ -56,10 +56,14 @@ const ProjectDetails = () => {
               href="https://sprightly-moonbeam-219a97.netlify.app/"
               target="_blank"
             >
-              <button className="btn">Live Site</button>
+              <button className="btn bg-gradient-to-r from-violet-500  to-fuchsia-400 text-white">
+                Live Site
+              </button>
             </a>
             <a href={project.githubClientLink} target="_blank">
-              <button className="btn ml-5">Github Repository</button>
+              <button className="btn ml-5 bg-gradient-to-r from-violet-500  to-fuchsia-400 text-white">
+                Github Repository
+              </button>
             </a>
           </div>
         </div>

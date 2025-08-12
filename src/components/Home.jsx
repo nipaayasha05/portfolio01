@@ -4,6 +4,8 @@ import { Link, useLocation } from "react-router";
 import Contact from "./Contact";
 import Projects from "./Projects";
 import Skills from "./Skills";
+import Banner from "./Banner";
+import Education from "./Education";
 
 const Home = () => {
   useEffect(() => {
@@ -11,6 +13,9 @@ const Home = () => {
   }, []);
   return (
     <div className="container mx-auto">
+      <div>
+        <Banner />
+      </div>
       <div>
         <About />
       </div>
@@ -20,10 +25,14 @@ const Home = () => {
       </div>
 
       <div>
-        <Contact />
+        <Education />
       </div>
       <div>
         <Projects />
+      </div>
+
+      <div>
+        <Contact />
       </div>
     </div>
   );

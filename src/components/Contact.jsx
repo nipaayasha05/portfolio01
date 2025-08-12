@@ -27,9 +27,11 @@ const Contact = () => {
   }, []);
 
   return (
-    <div className="text-white py-5 container mx-auto  sm:text-l">
-      <p className="text-3xl font-bold text-center py-5">Contact Information</p>
-      <div className="flex flex-col justify- items-center ">
+    <div className="   container mx-auto  sm:text-l">
+      <p className="text-3xl text-sky-100 font-bold text-center py-5">
+        Contact
+      </p>
+      <div className="flex    text-white flex-col justify- items-center ">
         <div className="flex  mb-20  flex-col sm:flex-row rounded-md bg-gray-700  items-center p-5  w-10/12  justify-center gap-7 ">
           <div className="space-y-5 flex-1 flex flex-col items-center  ">
             <div className="">
@@ -81,7 +83,11 @@ const Contact = () => {
                 className="border border-white mt-2 w-full h-20 rounded-md"
               />{" "}
               <br />
-              <input type="submit" value="Send" className="btn btn-block" />
+              <input
+                type="submit"
+                value="Send"
+                className="btn btn-block text-white  bg-gradient-to-r from-violet-500  to-fuchsia-400"
+              />
             </form>
           </div>
         </div>

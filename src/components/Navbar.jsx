@@ -26,12 +26,22 @@ const Navbar = () => {
       </li>
       <li>
         <NavLink
-          to="/top-car"
+          to="/skills"
           className={({ isActive }) =>
             isActive ? "border-b-2   border-b-gray-300  " : ""
           }
         >
           Skills
+        </NavLink>
+      </li>
+      <li>
+        <NavLink
+          to="/education"
+          className={({ isActive }) =>
+            isActive ? "border-b-2   border-b-gray-300  " : ""
+          }
+        >
+          Education
         </NavLink>
       </li>
 
@@ -61,7 +71,7 @@ const Navbar = () => {
   );
 
   return (
-    <div className="navbar   top-0 fixed text-white  bg-gray-800 shadow-sm border-b-2 border-gray-600 z-10 ">
+    <div className="navbar h-[75px]  top-0 fixed text-white  bg-gray-800 shadow-sm border-b-2 border-gray-600 z-10 ">
       <div className="flex  container mx-auto ">
         <div className="navbar-start ">
           <div className="dropdown ">
@@ -89,13 +99,19 @@ const Navbar = () => {
               {links}
             </ul>
           </div>
+          <p className="text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-violet-500  to-fuchsia-400">
+            Ayasha
+          </p>
         </div>
         <div className="navbar-center hidden lg:flex   font-semibold">
           <ul className="menu menu-horizontal px-1  ">{links}</ul>
         </div>
 
         <div className="navbar-end">
-          <NavLink to="/resume" className="btn">
+          <NavLink
+            to="/resume"
+            className="btn text-white bg-gradient-to-r from-violet-500  to-fuchsia-400"
+          >
             Resume
           </NavLink>
         </div>

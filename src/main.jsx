@@ -11,6 +11,8 @@ import Resume from "./components/Resume.jsx";
 import Contact from "./components/Contact.jsx";
 import Projects from "./components/Projects.jsx";
 import ProjectDetails from "./components/ProjectDetails.jsx";
+import Skills from "./components/Skills.jsx";
+import Education from "./components/Education.jsx";
 
 const router = createBrowserRouter([
   {
@@ -38,9 +40,17 @@ const router = createBrowserRouter([
         Component: Projects,
       },
       {
+        path: "skills",
+        Component: Skills,
+      },
+      {
         path: "project-details/:id",
         Component: ProjectDetails,
         loader: () => fetch("/projects.json"),
+      },
+      {
+        path: "education",
+        Component: Education,
       },
     ],
   },
