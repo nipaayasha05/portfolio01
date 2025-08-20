@@ -1,13 +1,29 @@
 [
   {
     "id": 1,
-    "projectName": "Medicart",
+    "projectName": "MediCart",
+    "project": "Multi-Vendor Medicine E-commerce Platform",
+    "sentence": "Medicine e-commerce platform with multi-role access.",
+    "briefDescription": "Medicart is a multi-vendor e-commerce platform for selling medicines. The project features role-based access where sellers can add medicines categorized by type. Users can browse products, add them to their cart, and make payments securely via Stripe.",
     "projectImage": "https://i.ibb.co/qL7nMxY3/Screenshot-2025-08-08-125107.png",
     "detailsPageUrl": "https://illustrious-pudding-bb0b01.netlify.app/",
     "mainTechnologyStack": ["React.js", "Firebase", "Tailwind CSS"],
-    "briefDescription": "Medicart is a multi-vendor e-commerce platform specializing in medicine sales with role-based access for admin, sellers, and users. Features secure payments via Stripe and extensive admin management tools.",
+    "shortDescription": "MediCart is a multi-vendor medicine e-commerce platform with role-based dashboards for admin, sellers, and users, featuring secure Stripe payments and product management tools.",
     "liveProjectLink": "https://illustrious-pudding-bb0b01.netlify.app/",
-    "githubClientLink": "https://github.com/nipaayasha05/medicine-selling-e-commerce-website",
+    "githubClientLink": "https://github.com/nipaayasha05/medicart-client",
+    "githubServerLink": "https://github.com/nipaayasha05/medicart-server",
+    "features": [
+      "Firebase Authentication using email/password and social login (Google)",
+      "Role-based access control (Admin, Seller, User)",
+      "Responsive design for all screen sizes",
+      "Separate dashboards for Admin, Seller, and User",
+      "Cart page: adjust quantity, remove items, clear cart",
+      "Checkout via Stripe with live payment integration",
+      "After successful payment, user sees an invoice page with print/download (PDF) feature",
+      "Manage Users: change roles, promote/demote users",
+      "Manage Categories: add/update/delete categories with image upload",
+      "Payment Management: approve pending payments"
+    ],
     "challengesFaced": [
       "Implementing role-based access control to separate admin, seller, and user functionalities securely.",
       "Integrating Stripe for live payment processing and ensuring secure transactions.",
@@ -18,19 +34,31 @@
     "potentialImprovements": [
       "Implement more advanced analytics and sales reports for admins and sellers.",
       "Add real-time chat support between buyers and sellers.",
-
       "Introduce product recommendation engine based on user behavior."
     ]
   },
   {
     "id": 2,
     "projectName": "FleetGo",
+    "project": "Car Rental Platform",
+    "sentence": "Online platform for renting and managing cars.",
     "projectImage": "https://i.ibb.co.com/x821JnF8/Screenshot-2025-08-12-015156.png",
+    "briefDescription": "FleetGo is a comprehensive car rental platform that allows users to book cars in advance with ease. Registered users can add new cars to the system and update car information as needed. Customers can browse available cars, make advance bookings, and modify their booking times if necessary.  FleetGo aims to simplify car rentals by offering real-time availability and easy management of bookings and vehicle data.",
     "detailsPageUrl": "https://sprightly-moonbeam-219a97.netlify.app/",
     "mainTechnologyStack": ["React.js", "Firebase", "Tailwind CSS"],
-    "briefDescription": "FleetGo is a comprehensive car rental platform allowing users to browse cars, book with real-time availability, and manage bookings with ease.",
+    "shortDescription": "A modern car rental system where users can browse available cars, select pickup and return dates, make bookings, and manage their reservations easily.",
     "liveProjectLink": "https://sprightly-moonbeam-219a97.netlify.app/",
-    "githubClientLink": "https://github.com/nipaayasha05/car-rental-project",
+    "githubClientLink": "https://github.com/nipaayasha05/fleetgo-client",
+    "githubServerLink": "https://github.com/nipaayasha05/fleetgo-server",
+    "features": [
+      "View cars with details like model, brand, location, price, availability",
+      "Book cars by selecting pickup and return dates",
+      "Each time a car is booked, its booking count is automatically increased",
+      "Search cars by brand, model, or location using keywords",
+      "Homepage shows recently added cars sorted by date",
+      "Users can view and manage their own bookings",
+      "Admin can add, update, or delete cars from the system"
+    ],
     "challengesFaced": [
       "Implementing real-time availability updates to prevent overbooking.",
       "Handling date selection and validation for pickup and return dates carefully.",
@@ -38,25 +66,34 @@
     ],
     "potentialImprovements": [
       "Add payment gateway integration for instant payments.",
-
       "Enhance admin dashboard with detailed analytics.",
-
       "Add multi-language support for wider audience."
     ]
   },
   {
     "id": 3,
     "projectName": "GreenSpire",
+    "project": "Gardening Blog Platform",
+    "sentence": "Community platform for sharing gardening tips and blogs.",
     "projectImage": "https://i.ibb.co.com/fYt4sn02/Screenshot-2025-08-12-015005.png",
+    "briefDescription": "GreenSpire is a gardening based website.Here users can share their blog posts about gardening.They can easily delete and update their own blog posts.Users can view the active gardeners of the garden.They can see the top blog post about gardening.they can also explore the top plant of the month.",
     "detailsPageUrl": "https://dancing-unicorn-47edd5.netlify.app/",
     "mainTechnologyStack": [
       "React.js",
       "Firebase Authentication",
       "Tailwind CSS"
     ],
-    "briefDescription": "GreenSpire is a gardening website where users can share blogs, explore top gardeners, top blogs, and plant of the month with easy blog management.",
+    "shortDescription": "Greenspire is a community-driven gardening blog platform where users can write, update, and explore gardening posts while connecting with local gardeners.",
     "liveProjectLink": "https://dancing-unicorn-47edd5.netlify.app/",
-    "githubClientLink": "https://github.com/nipaayasha05/garden-10",
+    "githubClientLink": "https://github.com/nipaayasha05/medicart-client",
+    "githubServerLink": "https://github.com/nipaayasha05/greenspire-server",
+    "features": [
+      "Login and Logout functionality",
+      "Users can share their own blog about gardening",
+      "Users can see active gardeners of the garden",
+      "Users can see the top blog posts about gardening",
+      "Users can delete and update their own blog posts"
+    ],
     "challengesFaced": [
       "Building a dynamic blog system with create, update, and delete functionality.",
       "Managing real-time updates for active gardeners and top blog listings."

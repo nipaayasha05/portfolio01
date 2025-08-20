@@ -9,7 +9,7 @@ const Resume = () => {
   return (
     <div className="py-5 container mx-auto">
       <a href={pdfUrl} download>
-        <button className="btn text-white btn-block bg-gradient-to-r from-violet-500  to-fuchsia-400">
+        <button className="btn text-white hover:from-violet-700 hover:to-fuchsia-500  bg-gradient-to-r from-violet-500  border-none to-fuchsia-400">
           Download
         </button>
       </a>

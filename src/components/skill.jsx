@@ -2,10 +2,10 @@ import React from "react";
 
 const skill = ({ skill }) => {
   return (
-    <div className="m-5">
-      <div className="w-[120px] sm:w-[150px] h-[120px] sm:h-[150px] rounded-xl flex justify-center items-center  bg-gray-700">
+    <div className="m-5 transform transition duration-300 hover:scale-110 ">
+      <div className="w-[150px] sm:w-[200px] h-[150px] sm:h-[200px] rounded-xl flex justify-center items-center  bg-gray-800">
         <img
-          className="w-[100px] h-[100px] card   bg-gray-700"
+          className="w-[150px]  h-[150px] card   bg-gray-700 p-2"
           src={skill.logoUrl}
           alt=""
         />

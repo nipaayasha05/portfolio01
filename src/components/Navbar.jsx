@@ -71,7 +71,7 @@ const Navbar = () => {
   );
 
   return (
-    <div className="navbar h-[75px]  top-0 fixed text-white  bg-gray-800 shadow-sm border-b-2 border-gray-600 z-10 ">
+    <div className="navbar h-20    top-0 fixed text-white  bg-gray-900 shadow-lg  2 border-gray-600 z-10 ">
       <div className="flex  container mx-auto ">
         <div className="navbar-start ">
           <div className="dropdown ">
@@ -110,7 +110,7 @@ const Navbar = () => {
         <div className="navbar-end">
           <NavLink
             to="/resume"
-            className="btn text-white bg-gradient-to-r from-violet-500  to-fuchsia-400"
+            className="btn hover:from-violet-700 hover:to-fuchsia-500 text-white bg-gradient-to-r from-violet-500 border-none to-fuchsia-400"
           >
             Resume
           </NavLink>

@@ -9,14 +9,17 @@ const Skills = () => {
       .then((data) => setSkills(data));
   }, []);
   return (
-    <div className="container mx-auto">
-      <h3 className="text-3xl   text-white text-center font-bold py-5">
+    <div className="container  mx-auto">
+      <h3 className="text-4xl   text-white text-center font-bold py-2">
         My Skills{" "}
       </h3>
-      <div className=" flex justify-center items-center flex-wrap gap- ">
-        {skills.map((skill) => (
-          <Skill skill={skill} key={skill.id}></Skill>
-        ))}
+      <div className="flex justify-center items-center ">
+        {" "}
+        <div className=" m-5  grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5">
+          {skills.map((skill) => (
+            <Skill skill={skill} key={skill.id}></Skill>
+          ))}
+        </div>
       </div>
     </div>
   );

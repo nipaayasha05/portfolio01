@@ -1,5 +1,8 @@
 import React, { useEffect } from "react";
+import { BsGithub } from "react-icons/bs";
+import { FiExternalLink } from "react-icons/fi";
 import { useLoaderData, useParams } from "react-router";
+import { Features } from "tailwindcss";
 
 const ProjectDetails = () => {
   useEffect(() => {
@@ -9,65 +12,76 @@ const ProjectDetails = () => {
   const projects = useLoaderData();
   const project = projects.find((project) => project.id == id);
   return (
-    <div>
+    <div className="container m-5 w-10/12 mx-auto  py-10">
       {" "}
-      <div className="container flex items-center text-white  mx-auto pt-10">
-        <div className=" m-5 flex bg-gray-800 flex-col lg:flex-row justify-center items-center shadow-gray-600  shadow-md p-5 rounded-xl space-y-5 lg:gap-10">
-          <div className="flex-1">
-            <img
-              className=" shadow-xl rounded-xl"
-              src={project.projectImage}
-              alt=""
-            />
-          </div>
-          <div className="flex-1 text-sky-100 text-start space-y-2 lg::w-3xl    ">
-            <p>
-              <strong>Project Name : </strong>
+      <div className=" ">
+        <div className="text-sky-100 text-lg space-y-5">
+          <div>
+            {" "}
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-violet-500  to-fuchsia-400 text-4xl font-bold">
               {project.projectName}
-            </p>
+            </span>{" "}
+            <span className="text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-violet-500  to-fuchsia-400">
+              - {project.project}
+            </span>
+          </div>
+          <p className="text-lg">{project.briefDescription}</p>
+          <img src={project.projectImage} className="rounded-xl " alt="" />
+          <div className="text-lg">
+            <strong>Features : </strong>
+            {project.features.map((feature) => (
+              <div feature={feature} key={feature.id}>
+                <p className="  "> - {feature}</p>
+              </div>
+            ))}
+          </div>
+          <div className="flex   items-center">
+            <strong className="text-sky-100 text-lg">
+              Main technology stack used :{" "}
+            </strong>
             <div>
-              <strong>Main technology stack used : </strong>
+              {" "}
               {project.mainTechnologyStack.map((tech, index) => (
-                <p className="badge badge-outline mr-3" tech={tech} key={index}>
+                <p
+                  className="badge badge-outline ml-2 mr-2 text-sky-100 text-lg"
+                  tech={tech}
+                  key={index}
+                >
                   {tech}
                 </p>
               ))}
             </div>
-            <p>
-              <strong>Brief description : </strong>
-              {project.briefDescription}
-            </p>
-            <p>
-              <strong>Live project link : </strong>
-              {project.liveProjectLink}
-            </p>
-            <p>
-              <strong>Challenges faced while developing the project : </strong>
-              {project.challengesFaced}
-            </p>
-            <p>
-              <strong>
-                Potential improvements and future plans for the project :{" "}
-              </strong>
-              {project.potentialImprovements}
-            </p>
-
-            <a
-              href="https://sprightly-moonbeam-219a97.netlify.app/"
-              target="_blank"
-            >
-              <button className="btn bg-gradient-to-r from-violet-500  to-fuchsia-400 text-white">
-                Live Site
+          </div>
+          <p className="text-lg">
+            {" "}
+            <strong>Challenges Faced :</strong>
+            {project.challengesFaced}
+          </p>
+          <p>
+            {" "}
+            <strong>Potential Improvements :</strong>
+            {project.potentialImprovements}
+          </p>
+          <div className="flex gap-5 ">
+            <a href={project.liveProjectLink} target="_blank">
+              <button className="btn hover:from-violet-700 hover:to-fuchsia-500 py-5 text-white sm:py-0 border-none bg-gradient-to-r from-violet-500  to-fuchsia-400">
+                {" "}
+                Live Link <FiExternalLink size={20} />
               </button>
             </a>
             <a href={project.githubClientLink} target="_blank">
-              <button className="btn ml-5 bg-gradient-to-r from-violet-500  to-fuchsia-400 text-white">
-                Github Repository
+              <button className="btn hover:from-violet-700 hover:to-fuchsia-500 py-5 text-white border-none sm:py-0 bg-gradient-to-r from-violet-500  to-fuchsia-400">
+                Github Client <BsGithub size={20} />
+              </button>
+            </a>
+            <a href={project.githubServerLink} target="_blank">
+              <button className="btn hover:from-violet-700 hover:to-fuchsia-500 py-5 text-white border-none sm:py-0 bg-gradient-to-r from-violet-500  to-fuchsia-400">
+                Github server <BsGithub size={20} />
               </button>
             </a>
           </div>
         </div>
-      </div>{" "}
+      </div>
     </div>
   );
 };

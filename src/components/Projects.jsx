@@ -17,7 +17,7 @@ const Projects = () => {
 
   return (
     <div className="m-5 container mx-auto">
-      <h3 className="text-3xl text-sky-100   text-center font-bold py-5">
+      <h3 className="text-4xl text-sky-100   text-center font-bold py-5">
         Projects
       </h3>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 ">

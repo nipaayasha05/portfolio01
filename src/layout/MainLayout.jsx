@@ -5,15 +5,15 @@ import Footer from "./Footer";
 
 const MainLayout = () => {
   return (
-    <div className="  ">
-      <div className="mb-16 ">
+    <div className=" font-montserrat  ">
+      <div className="mb-14 ">
         <Navbar></Navbar>
       </div>
       <div
-        className=" py-2 bg-linear-to-r from-gray-800 to-gray-800
+        className=" py-2 bg-linear-to-r from-gra-900 to-gray-80 bg-gray-900
 min-h-[calc(100vh-125px)]    "
       >
-        <div className="">
+        <div className="max-w-6xl mx-auto">
           <Outlet />
         </div>
       </div>
