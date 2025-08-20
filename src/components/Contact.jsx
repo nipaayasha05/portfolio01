@@ -81,6 +81,7 @@ const Contact = () => {
                   value="Send"
                   className="btn hover:from-violet-700 hover:to-fuchsia-500 border-none btn-block text-white  bg-gradient-to-r from-violet-500  to-fuchsia-400"
                 />
+                {/* dkokedq */}
               </form>
             </div>
           </div>
