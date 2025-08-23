@@ -3,6 +3,7 @@ import image from "../assets/protfolio.png";
 import { NavLink } from "react-router";
 import { FaFacebook } from "react-icons/fa6";
 import { BsGithub, BsLinkedin } from "react-icons/bs";
+import { MdOutlineFileDownload } from "react-icons/md";
 
 const Banner = () => {
   const pdfUrl = "/resume.pdf";
@@ -29,6 +30,7 @@ const Banner = () => {
               <a href={pdfUrl} download>
                 <button className="btn text-white hover:from-violet-700 hover:to-fuchsia-500  bg-gradient-to-r from-violet-500  border-none to-fuchsia-400">
                   Resume
+                  <MdOutlineFileDownload size={20} />
                 </button>
               </a>
 
