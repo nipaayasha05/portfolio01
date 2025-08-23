@@ -29,8 +29,8 @@ const ProjectDetails = () => {
           <img src={project.projectImage} className="rounded-xl " alt="" />
           <div className="text-lg">
             <strong>Features : </strong>
-            {project.features.map((feature) => (
-              <div feature={feature} key={feature.id}>
+            {project.features.map((feature, index) => (
+              <div feature={feature} key={index}>
                 <p className="  "> - {feature}</p>
               </div>
             ))}
@@ -43,7 +43,7 @@ const ProjectDetails = () => {
               {" "}
               {project.mainTechnologyStack.map((tech, index) => (
                 <p
-                  className="badge badge-outline ml-2 mr-2 text-sky-100 text-lg"
+                  className="badge bg-gray-800 badge-outline ml-2 mr-2 text-sky-100 text-md sm:text-md"
                   tech={tech}
                   key={index}
                 >
