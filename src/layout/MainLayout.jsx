@@ -5,7 +5,7 @@ import Footer from "./Footer";
 
 const MainLayout = () => {
   return (
-    <div className=" font-montserrat  ">
+    <div className=" font-montserrat overflow-x-hidden ">
       <div className="mb-14 ">
         <Navbar></Navbar>
       </div>
