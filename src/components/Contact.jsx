@@ -33,8 +33,8 @@ const Contact = () => {
       </p>
       <div className="flex gap- text-white flex-col sm:flex-row   ">
         <div className="flex w-10/10 mb-20  flex-col sm:flex-row text-xl rounded-xl bg-linear-to-r from-slate-900 to-slate-800   shadow-xl border border-slate-800 items-center md:p-5 p-5  gap-7 ">
-          <div className=" space-y-5 py-5 flex-">
-            <div className="flex 0transform transition duration-300 hover:scale-105 border rounded-xl p-5 items-center justify-center gap-2">
+          <div className=" space-y-5 py-5   flex-">
+            <div className="flex 0transform m-5 transition duration-300 hover:scale-105 border rounded-xl p-5 items-center justify-center gap-2">
               <p className="bg-gray-800 rounded-full p-2">
                 <MdEmail size={24} color="gray" />
               </p>
@@ -43,7 +43,7 @@ const Contact = () => {
                 <div className=" "> mst.ayashakter05@gmail.com</div>
               </div>
             </div>
-            <div className="flex transform transition duration-300 hover:scale-105 items-center border rounded-xl p-5 justify-center gap-2">
+            <div className="flex m-5 transform transition duration-300 hover:scale-105 items-center border rounded-xl p-5 justify-center gap-2">
               <p className="bg-gray-800 rounded-full p-2">
                 <FaPhone size={24} color="gray" />
               </p>

@@ -5,6 +5,7 @@ import { FaFacebook } from "react-icons/fa6";
 import { BsGithub, BsLinkedin } from "react-icons/bs";
 
 const Banner = () => {
+  const pdfUrl = "/resume.pdf";
   return (
     <div className="m-5  from-gray-90 to-violet-95  bg-radial-[at_50%_25%] from-gray-900 via-indigo-950 to-slate-900 rounded-xl to-90%   p-10 lg:h-[70vh] md:h-[85vh] pt-5  flex flex-col items-center border border-slate-80 shadow-xl justify-center">
       <div className="">
@@ -25,12 +26,11 @@ const Banner = () => {
               dynamic web applications.
             </p>
             <div className="flex gap-5 items-center py-2">
-              <NavLink
-                to="/resume"
-                className="btn hover:from-violet-700 hover:to-fuchsia-500 border-none text-white bg-gradient-to-r from-violet-500  to-fuchsia-400"
-              >
-                Resume
-              </NavLink>
+              <a href={pdfUrl} target="_blank">
+                <button className="btn text-white hover:from-violet-700 hover:to-fuchsia-500  bg-gradient-to-r from-violet-500  border-none to-fuchsia-400">
+                  Resume
+                </button>
+              </a>
 
               <a href="https://github.com/nipaayasha05" target="_blank">
                 <BsGithub size={30} color="white" />
