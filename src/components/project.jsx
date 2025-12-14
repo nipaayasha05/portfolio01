@@ -16,16 +16,16 @@ const Project = ({ project }) => {
         />
       </figure>
       <div className="card-body bg-linear-to-r from-slate-800 to-slate-700 rounded-b-md">
-        <h2 className="card-title text-transparent bg-clip-text bg-gradient-to-r from-violet-500  to-fuchsia-400 text-2xl font-bold  ">
+        <h2 className="card-title text-transparent bg-clip-text bg-gradient-to-r from-blue-400  to-blue-300 text-2xl font-bold  ">
           {project.projectName}
         </h2>
-        <p className="text-lg">{project.shortDescription}</p>
+        <p className="  sm:text-lg">{project.shortDescription}</p>
 
         <div className="card-actions justify-end">
           <Link
             to={`/project-details/${project.id}`}
             // onClick={() => navigate(`/project-details/${project.id}`)}
-            className="btn hover:from-violet-700 hover:to-fuchsia-500 border-none text-white btn-block bg-gradient-to-r from-violet-500  to-fuchsia-400"
+            className="btn hover:from-blue-500 hover:to-blue-500 border-none focus:outline-none focus:shadow-none outline-none shadow-none text-white btn-block bg-gradient-to-r from-blue-500  to-blue-400"
           >
             View More
           </Link>

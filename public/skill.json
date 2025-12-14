@@ -43,5 +43,10 @@
     "id": 9,
     "name": "Express.js",
     "logoUrl": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/express/express-original-wordmark.svg"
+  },
+  {
+    "id": 10,
+    "name": "Next.js",
+    "logoUrl": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nextjs/nextjs-original-wordmark.svg"
   }
 ]

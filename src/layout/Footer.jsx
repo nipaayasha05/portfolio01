@@ -3,8 +3,8 @@ import { BsGithub, BsLinkedin } from "react-icons/bs";
 
 const Footer = () => {
   return (
-    <div className="bg-gray-700 ">
-      <footer className="footer sm:footer-horizontal bg-gray-700 text-neutral-content items-center p-4 container mx-auto">
+    <div className="bg-slate-800 ">
+      <footer className="footer sm:footer-horizontal bg-slate-800 text-neutral-content items-center p-4 container mx-auto">
         <aside className="grid-flow-col items-center">
           <p>Ayasha | Fronted Developer</p>
         </aside>

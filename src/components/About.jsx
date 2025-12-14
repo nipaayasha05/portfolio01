@@ -9,11 +9,11 @@ const About = () => {
     <div className=" container  mx-auto">
       {" "}
       <div className="py-5 m-5  space-y-3 text-sky-100">
-        <p className="text-4xl font-bold text-center text-sky-100 pb-5">
+        <p className="text-3xl  bg-clip-text bg-gradient-to-r from-blue-50  to-blue-10 sm:text-4xl font-bold text-center text-blue-200  pb-5">
           About Me
         </p>
-        <div className="border-2 transform transition duration-300 hover:scale-105 text-cente   border-violet-400 p-5  rounded-xl">
-          <div className="text-xl rounded-xl bg-linear-to-r from-slate-900 to-slate-800  p-5 shadow-xl border border-slate-800">
+        <div className="border-2 transform transition duration-300 hover:scale-105 text-cente   border-blue-300 p-5  rounded-xl">
+          <div className="sm:text-lg  rounded-xl bg-linear-to-r from-slate-900 to-slate-800  p-5 shadow-xl border border-slate-800">
             <p>
               Hi, I’m Ayasha — a passionate Frontend Developer with over a year
               of experience creating responsive, user-friendly, and visually

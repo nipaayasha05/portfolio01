@@ -10,12 +10,12 @@ const Skills = () => {
   }, []);
   return (
     <div className="container  mx-auto">
-      <h3 className="text-4xl   text-white text-center font-bold py-2">
+      <h3 className="text-3xl sm:text-4xl text-blue-200    text-center font-bold py-2">
         My Skills{" "}
       </h3>
       <div className="flex justify-center items-center ">
         {" "}
-        <div className=" m-5  grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5">
+        <div className=" m-5  grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-5">
           {skills.map((skill) => (
             <Skill skill={skill} key={skill.id}></Skill>
           ))}

@@ -1,5 +1,5 @@
 import React from "react";
-import { NavLink } from "react-router";
+import { Link, NavLink } from "react-router";
 
 const Navbar = () => {
   const links = (
@@ -9,8 +9,8 @@ const Navbar = () => {
           to="/"
           className={({ isActive }) =>
             isActive
-              ? "border-b-2   border-b-gray-300  text-lg text-sky-100"
-              : "text-lg text-sky-100"
+              ? "border-b-1   border-b-gray-300  sm:text-lg text-sky-100"
+              : "sm:text-lg text-sky-100"
           }
         >
           Home
@@ -21,8 +21,8 @@ const Navbar = () => {
           to="/about"
           className={({ isActive }) =>
             isActive
-              ? "border-b-2   border-b-gray-300  text-lg text-sky-100"
-              : "text-lg text-sky-100"
+              ? "border-b-1   border-b-gray-300  sm:text-lg text-sky-100"
+              : "sm:text-lg text-sky-100"
           }
         >
           About
@@ -33,8 +33,8 @@ const Navbar = () => {
           to="/skills"
           className={({ isActive }) =>
             isActive
-              ? "border-b-2   border-b-gray-300  text-lg text-sky-100"
-              : "text-lg text-sky-100"
+              ? "border-b-1   border-b-gray-300  sm:text-lg text-sky-100"
+              : "sm:text-lg text-sky-100"
           }
         >
           Skills
@@ -45,8 +45,8 @@ const Navbar = () => {
           to="/education"
           className={({ isActive }) =>
             isActive
-              ? "border-b-2   border-b-gray-300  text-lg text-sky-100"
-              : "text-lg text-sky-100"
+              ? "border-b-1   border-b-gray-300  sm:text-lg text-sky-100"
+              : "sm:text-lg text-sky-100"
           }
         >
           Education
@@ -59,8 +59,8 @@ const Navbar = () => {
             to="/projects"
             className={({ isActive }) =>
               isActive
-                ? "border-b-2   border-b-gray-300 text-lg text-sky-100"
-                : "text-lg text-sky-100"
+                ? "border-b-1   border-b-gray-300 sm:text-lg text-sky-100"
+                : "sm:text-lg text-sky-100"
             }
           >
             Projects
@@ -71,8 +71,8 @@ const Navbar = () => {
             to="/contact"
             className={({ isActive }) =>
               isActive
-                ? "border-b-2   border-b-gray-300 text-lg  text-sky-100"
-                : "text-lg text-sky-100"
+                ? "border-b-1   border-b-gray-300 sm:text-lg  text-sky-100"
+                : "sm:text-lg text-sky-100"
             }
           >
             Contact
@@ -111,16 +111,19 @@ const Navbar = () => {
               {links}
             </ul>
           </div>  */}
-          <p className="text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-violet-500  to-fuchsia-400">
+          <Link
+            to="/"
+            className="text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-400  to-blue-300"
+          >
             Ayasha
-          </p>
+          </Link>
         </div>
         {/* <div className="navbar-center hidden lg:flex md:flex  font-semibold">
           <ul className="menu menu-horizontal px-1  ">{links}</ul>
         </div> */}
 
         <div className="navbar-end">
-          <div className="navbar-center hidden lg:flex md:flex  font-semibold">
+          <div className="navbar-center hidden lg:flex md:flex  font-semibol">
             <ul className="menu menu-horizontal px-1  ">{links}</ul>
           </div>
           <div className="dropdown dropdown-end ">

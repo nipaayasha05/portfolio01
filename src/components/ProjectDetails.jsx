@@ -12,22 +12,22 @@ const ProjectDetails = () => {
   const projects = useLoaderData();
   const project = projects.find((project) => project.id == id);
   return (
-    <div className="container m-5 w-10/12 mx-auto  py-10">
+    <div className="container m-5 w-10/12 mx-auto  py-5 sm:py-10">
       {" "}
       <div className=" ">
-        <div className="text-sky-100 text-lg space-y-5">
+        <div className="text-sky-100 sm:text-lg space-y-2 sm:space-y-5">
           <div>
             {" "}
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-violet-500  to-fuchsia-400 text-4xl font-bold">
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400  to-blue-300 text-4xl font-bold">
               {project.projectName}
             </span>{" "}
-            <span className="text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-violet-500  to-fuchsia-400">
+            <span className="text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-300  to-blue-200">
               - {project.project}
             </span>
           </div>
-          <p className="text-lg">{project.briefDescription}</p>
+          <p className="sm:text-lg">{project.briefDescription}</p>
           <img src={project.projectImage} className="rounded-xl " alt="" />
-          <div className="text-lg">
+          <div className="sm:text-lg">
             <strong>Features : </strong>
             {project.features.map((feature, index) => (
               <div feature={feature} key={index}>
@@ -36,7 +36,7 @@ const ProjectDetails = () => {
             ))}
           </div>
           <div className="flex   items-center">
-            <strong className="text-sky-100 text-lg">
+            <strong className="text-sky-100 sm:text-lg">
               Main technology stack used :{" "}
             </strong>
             <div>
@@ -52,7 +52,7 @@ const ProjectDetails = () => {
               ))}
             </div>
           </div>
-          <p className="text-lg">
+          <p className="sm:text-lg">
             {" "}
             <strong>Challenges Faced :</strong>
             {project.challengesFaced}
@@ -64,18 +64,18 @@ const ProjectDetails = () => {
           </p>
           <div className="flex gap-5 ">
             <a href={project.liveProjectLink} target="_blank">
-              <button className="btn hover:from-violet-700 hover:to-fuchsia-500 py-5 text-white sm:py-0 border-none bg-gradient-to-r from-violet-500  to-fuchsia-400">
+              <button className="btn hover:from-blue-500 hover:to-blue-500 py-5 text-white sm:py-0 border-0 outline-none shadow-none focus:outline-none focus:shadow-none  bg-gradient-to-r from-blue-500  to-blue-400">
                 {" "}
                 Live Link <FiExternalLink size={20} />
               </button>
             </a>
             <a href={project.githubClientLink} target="_blank">
-              <button className="btn hover:from-violet-700 hover:to-fuchsia-500 py-5 text-white border-none sm:py-0 bg-gradient-to-r from-violet-500  to-fuchsia-400">
+              <button className="btn hover:from-blue-500 hover:to-blue-500 py-5 text-white border-0 outline-none shadow-none focus:outline-none focus:shadow-none  sm:py-0 bg-gradient-to-r from-blue-500  to-blue-400">
                 Github Client <BsGithub size={20} />
               </button>
             </a>
             <a href={project.githubServerLink} target="_blank">
-              <button className="btn hover:from-violet-700 hover:to-fuchsia-500 py-5 text-white border-none sm:py-0 bg-gradient-to-r from-violet-500  to-fuchsia-400">
+              <button className="btn hover:from-blue-500 hover:to-blue-500 py-5 text-white border-0 outline-none shadow-none focus:outline-none focus:shadow-none  sm:py-0 bg-gradient-to-r from-blue-500  to-blue-400">
                 Github server <BsGithub size={20} />
               </button>
             </a>
