@@ -8,6 +8,8 @@ const Contact = () => {
   const sendEmail = (e) => {
     e.preventDefault();
 
+    console.log(form.current);
+
     emailjs
       .sendForm("service_tub25ft", "template_q4vi23f", form.current, {
         publicKey: "iPhPRq5eF7TUB9Ggs",
@@ -18,7 +20,7 @@ const Contact = () => {
         },
         (error) => {
           console.log("FAILED...", error.text);
-        }
+        },
       );
   };
 
