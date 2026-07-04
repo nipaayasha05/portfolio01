@@ -13,18 +13,18 @@ const MainLayout = () => {
 
   return (
     <div className=" font-montserrat overflow-x-hidden ">
-      <div className="mb-14 ">
+      <div className="">
         <Navbar></Navbar>
       </div>
       <div
-        className=" py-2   bg-slate-900
+        className=" py-2   
 min-h-[calc(100vh-115px)]    "
       >
-        <div className="max-w-6xl mx-auto ">
+        <div className="">
           <Outlet />
         </div>
       </div>
-      <div className="bg-gray-700">
+      <div className="bg-gray-900">
         {" "}
         <Footer></Footer>
       </div>

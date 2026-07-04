@@ -1,14 +1,14 @@
 import React, { useEffect, useRef } from "react";
 import emailjs from "@emailjs/browser";
 import { MdEmail } from "react-icons/md";
-import { FaPhone } from "react-icons/fa6";
+import { FaPhone, FaWhatsapp } from "react-icons/fa6"; // Added WhatsApp icon
+import toast from "react-hot-toast";
 
 const Contact = () => {
   const form = useRef();
+
   const sendEmail = (e) => {
     e.preventDefault();
-
-    console.log(form.current);
 
     emailjs
       .sendForm("service_tub25ft", "template_q4vi23f", form.current, {
@@ -16,80 +16,159 @@ const Contact = () => {
       })
       .then(
         () => {
-          console.log("SUCCESS!");
+          form.current.reset();
+          toast.success("Message sent successfully!");
         },
         (error) => {
           console.log("FAILED...", error.text);
+          toast.error("Message not sent!");
         },
       );
   };
 
   useEffect(() => {
-    document.title = "Portfolio";
+    document.title = "Portfolio | Contact";
   }, []);
 
   return (
-    <div className="  container mx-auto  pb-5  ">
-      <p className="text-3xl sm:text-4xl text-blue-200 font-bold text-center py-5">
-        Contact
-      </p>
-      <div className="flex mt-5 mb-5 text-sky-100 flex-col sm:flex-row   ">
-        <div className="flex w-10/10 mb-  flex-col sm:flex-row  rounded-xl bg-linear-to-r from-slate-900 to-slate-800   shadow-xl border border-slate-800 items-center md:p-5 p-5  gap-7 ">
-          <div className="  space-y-5 py-5   flex-">
-            <div className="flex transform sm:m-5 transition duration-300 hover:scale-105 w-[345px] border border-blue-100 rounded-xl p-5 items-center justify-center gap-2">
-              <p className="bg-slate-800 rounded-full p-2">
-                <MdEmail size={24} color="white" />
+    <div className="max-w-7xl container mx-auto px- pb-16 pt-10">
+      {/* Section Header */}
+      <div className="flex items-center gap-4 mb-12">
+        <div className="flex-1 h-[1px] bg-slate-800"></div>
+        <h2 className="text-3xl sm:text-4xl text-blue-200 text-center font-bold tracking-widest uppercase">
+          Contact Me
+        </h2>
+        <div className="flex-1 h-[1px] bg-slate-800"></div>
+      </div>
+
+      {/* Main Container */}
+      <div className=" mx-auto rounded-2xl bg-gradient-to-br from-slate-950 to-slate-900 p-6 sm:p-10 shadow-2xl border border-slate-800/60 text-sky-100">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-stretch">
+          {/* Left Side: Contact Info Info Cards */}
+          <div className="flex flex-col justify-center space-y-6">
+            <div className="space-y-2">
+              <h3 className="text-2xl font-semibold text-blue-300">
+                Let's Connect
+              </h3>
+              <p className="text-slate-400 text-sm sm:text-base leading-relaxed">
+                Have a project in mind or looking to hire? Feel free to reach
+                out through any of these channels or drop a message here!
               </p>
-              <div className=" sm:text-lg">
-                <p className="font-bold   ">Email:</p>
-                <div className=" "> mst.ayashakter05@gmail.com</div>
-              </div>
             </div>
-            <div className="flex sm:m-5 transform transition duration-300 hover:scale-105 items-center border border-blue-100 rounded-xl p-5 justify-center gap-2">
-              <p className="bg-gray-800 rounded-full p-2">
-                <FaPhone size={24} color="white" />
-              </p>
-              <div className="flex items-start sm:text-lg justify-start mr-9">
-                <p className="font-bold">Phone:</p>
-                <div className=" "> +8801763887747</div>
+
+            <div className="space-y-4 pt-4">
+              {/* Email Card */}
+              <div className="flex items-center gap-4 border border-slate-800 bg-slate-900/40 backdrop-blur-sm rounded-xl p-4 transform transition-all duration-300 hover:scale-[1.02] hover:border-blue-500/40 shadow-md">
+                <div className="bg-blue-500/10 p-3 rounded-xl text-blue-400">
+                  <MdEmail size={24} />
+                </div>
+                <div>
+                  <p className="text-xs text-slate-400 font-medium tracking-wider uppercase">
+                    Email
+                  </p>
+                  <a
+                    href="mailto:mst.ayashakter05@gmail.com"
+                    className="text-sm sm:text-base hover:text-blue-300 transition-colors break-all"
+                  >
+                    mst.ayashakter05@gmail.com
+                  </a>
+                </div>
+              </div>
+
+              {/* Phone Card */}
+              <div className="flex items-center gap-4 border border-slate-800 bg-slate-900/40 backdrop-blur-sm rounded-xl p-4 transform transition-all duration-300 hover:scale-[1.02] hover:border-blue-500/40 shadow-md">
+                <div className="bg-blue-500/10 p-3 rounded-xl text-blue-400">
+                  <FaPhone size={22} />
+                </div>
+                <div>
+                  <p className="text-xs text-slate-400 font-medium tracking-wider uppercase">
+                    Phone
+                  </p>
+                  <a
+                    href="tel:+8801763887747"
+                    className="text-sm sm:text-base hover:text-blue-300 transition-colors"
+                  >
+                    +8801763887747
+                  </a>
+                </div>
+              </div>
+
+              {/* Location Card */}
+              <div className="flex items-center gap-4 border border-slate-800 bg-slate-900/40 backdrop-blur-sm rounded-xl p-4 transform transition-all duration-300 hover:scale-[1.02] hover:border-blue-500/40 shadow-md">
+                <div className="bg-blue-500/10 p-3 rounded-xl text-blue-400">
+                  {/* Import loop-e 'IoLocationSharp' use korte paro from 'react-icons/io5' */}
+                  <svg
+                    stroke="currentColor"
+                    fill="currentColor"
+                    strokeWidth="0"
+                    viewBox="0 0 24 24"
+                    height="24"
+                    width="24"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"></path>
+                  </svg>
+                </div>
+                <div>
+                  <p className="text-xs text-slate-400 font-medium tracking-wider uppercase">
+                    Location
+                  </p>
+                  <p className="text-sm sm:text-base text-slate-200">
+                    Dhaka, Bangladesh
+                  </p>
+                </div>
               </div>
             </div>
           </div>
-          <div className=" sm:py-5  pb-5 sm:pb-0 transform transition duration-300 hover:scale-105  flex-1">
-            <div className="border border-blue-100  rounded-xl border-box px-3   py-3   sm:p-5   sm:m-2 ">
-              <form
-                ref={form}
-                onSubmit={sendEmail}
-                className="space-y-2 sm:space-y-4"
-              >
-                <label className="pb-2">Name</label> <br />
+
+          {/* Right Side: Message Form */}
+          <div className="border border-slate-800 bg-slate-900/20 backdrop-blur-sm rounded-2xl p-6 sm:p-8 shadow-inner flex flex-col justify-between">
+            <form ref={form} onSubmit={sendEmail} className="space-y-5">
+              <div>
+                <label className="text-sm font-medium text-slate-300 block mb-2">
+                  Your Name
+                </label>
                 <input
                   type="text"
+                  required
                   name="from_name"
-                  className="border p-2 border-blue-100  mt-2 w-[320px]  sm:w-full h-10 rounded-md"
+                  placeholder="your Name..."
+                  className="w-full bg-slate-900/60 border border-slate-800 rounded-lg h-11 px-4 text-sky-100 placeholder-slate-600 focus:outline-none focus:border-blue-500/80 focus:ring-1 focus:ring-blue-500/30 transition-all text-sm"
                 />
-                <br />
-                <label>Email</label> <br />
+              </div>
+
+              <div>
+                <label className="text-sm font-medium text-slate-300 block mb-2">
+                  Your Email
+                </label>
                 <input
                   type="email"
+                  required
                   name="from_email"
-                  className="border p-2 border-blue-100  mt-2 w-full h-10 rounded-md"
+                  placeholder="example@email.com"
+                  className="w-full bg-slate-900/60 border border-slate-800 rounded-lg h-11 px-4 text-sky-100 placeholder-slate-600 focus:outline-none focus:border-blue-500/80 focus:ring-1 focus:ring-blue-500/30 transition-all text-sm"
                 />
-                <br />
-                <label>Message</label> <br />
+              </div>
+
+              <div>
+                <label className="text-sm font-medium text-slate-300 block mb-2">
+                  Message
+                </label>
                 <textarea
                   name="message"
-                  className="border p-2 border-blue-100  mt-2 w-full h-32 rounded-md"
-                />{" "}
-                <br />
-                <input
-                  type="submit"
-                  value="Send"
-                  className="btn hover:from-blue-500 hover:to-blue-500 border-0 outline-none shadow-none focus:outline-none focus:shadow-none  btn-block text-white  bg-gradient-to-r from-blue-500  to-blue-400"
+                  required
+                  placeholder="Type your message here..."
+                  className="w-full bg-slate-900/60 border border-slate-800 rounded-lg h-32 p-4 text-sky-100 placeholder-slate-600 focus:outline-none focus:border-blue-500/80 focus:ring-1 focus:ring-blue-500/30 transition-all text-sm resize-none"
                 />
-                {/* dkokedq */}
-              </form>
-            </div>
+              </div>
+
+              <button
+                type="submit"
+                className="group mt-6 text-center hover:from-blue-600 hover:to-sky-500 shadow-lg shadow-blue-500/10 hover:shadow-blue-500/20 rounded-lg bg-gradient-to-r from-sky-500 to-blue-600 px-5 py-2 text-white  w-full"
+              >
+                Send Message
+              </button>
+            </form>
           </div>
         </div>
       </div>

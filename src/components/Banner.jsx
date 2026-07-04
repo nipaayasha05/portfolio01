@@ -1,57 +1,99 @@
 import React from "react";
 import image from "../assets/protfolio.png";
-import { NavLink } from "react-router";
-import { FaFacebook } from "react-icons/fa6";
 import { BsGithub, BsLinkedin } from "react-icons/bs";
 import { MdOutlineFileDownload } from "react-icons/md";
 
 const Banner = () => {
   const pdfUrl =
-    "https://drive.google.com/file/d/1EPG0kXk2dp7p9L7EuVPXk7D6eFVw4y2L/view?usp=sharing";
+    "https://drive.google.com/file/d/1_z3nrhsO3QY7gAkVs0MdBzIC5x1OSQzc/view?usp=sharing";
+
   return (
-    <div className="m-5 from-gray-90 to-violet-95 bg-radial-[at_150%_50%] from-slate-700 via-blue-950 to-slate-900 rounded-xl to-90% p-10 lg:h-[70vh] md:h-[70vh] pt-5 flex flex-col items-center shadow-md justify-center">
-      <div className="">
-        <div className="container mx-auto flex flex-col-reverse lg:flex-row items-center gap-10">
-          <div className="space-y-2 flex-1 w-full sm:w-6/12">
-            <div>
-              <p className="text-2xl md:text-4xl lg:text-4xl font-bold  -montserrat text-sky-100 text-center sm:text-start">
-                Hello, I am Ayasha
-              </p>
-              <p className="text-2xl md:text-5xl lg:text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-400  to-blue-300 text-center  sm:text-start">
+    <div className="relative mt-5 overflow-hidden rounded-2xl bg-slate-950 p-6 md:p-12 lg:p-16 min-h-[70vh]  items-center justify-center shadow-2xl border border-slate-800">
+      {/* Background Creative Elements (Ambient Glow) */}
+      <div className="absolute -top-20 -left-20 h-72 w-72 rounded-full bg-blue-500/10 blur-[100px]" />
+      <div className="absolute -bottom-20 -right-20 h-72 w-72 rounded-full bg-violet-500/10 blur-[100px]" />
+
+      <div className="container mx-auto max-w-6xl relative z-10">
+        <div className="flex flex-col-reverse lg:flex-row items-center justify-between gap-12 lg:gap-6">
+          {/* Left Content Column */}
+          <div className="space-y-6 flex-1 text-center lg:text-left max-w-2xl">
+            <div className="space-y-2">
+              <span className="inline-block text-xs md:text-sm font-semibold tracking-widest text-blue-400 uppercase bg-blue-500/10 px-3 py-1 rounded-full border border-blue-500/20">
+                Welcome to my portfolio
+              </span>
+              <h1 className="text-3xl md:text-5xl lg:text-6xl font-extrabold tracking-tight text-white font-sans">
+                Hello, I am{" "}
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-sky-400 via-blue-400 to-sky-300">
+                  Ayasha
+                </span>
+              </h1>
+              <h2 className="text-xl md:text-3xl lg:text-4xl font-bold text-slate-300">
                 Frontend Developer
-              </p>
+              </h2>
             </div>
-            <p className="sm:text-lg   md:text-lg lg:text-xl text-sky-100 w-5/6 text-center ml-6 sm:text-start sm:ml-0">
-              I build responsive and user-friendly web applications using React,
-              JavaScript, HTML, CSS, and Tailwind CSS.
+
+            <p className="text-sm md:text-base lg:text-lg text-slate-400 leading-relaxed max-w-xl mx-auto lg:mx-0">
+              I craft responsive, visually stunning, and user-focused web
+              applications using React, JavaScript, and modern CSS frameworks
+              like Tailwind CSS.
             </p>
-            <div className="flex flex-col-reverse sm:flex-row gap-5 items-center justify-center sm:justify-start py-2">
-              <a href={pdfUrl} target="_blank">
-                <button className="btn text-white  hover:from-blue-500 hover:to-blue-500  focus:outline-none focus:shadow-none bg-gradient-to-r from-blue-500  border-none shadow-none outline-none to-blue-400">
+
+            {/* Action Buttons & Socials */}
+            <div className="flex flex-col sm:flex-row gap-6 items-center justify-center lg:justify-start pt-4 w-full">
+              {/* Resume Button Wrapper */}
+              <a
+                href={pdfUrl}
+                target="_blank"
+                rel="noreferrer"
+                className="w-full sm:w-auto"
+              >
+                <button className="flex items-center justify-center gap-2 group text-center hover:from-blue-600 hover:to-sky-500 shadow-lg shadow-blue-500/10 hover:shadow-blue-500/20 rounded-xl bg-gradient-to-r from-sky-500 to-blue-600 px-6 py-3 text-white w-full sm:w-auto font-medium transition-all duration-300 tracking-wide cursor-pointer text-sm md:text-base">
                   Resume
-                  <MdOutlineFileDownload size={20} />
+                  <MdOutlineFileDownload size={22} />
                 </button>
               </a>
 
-              <div className="flex gap-2">
-                <a href="https://github.com/nipaayasha05" target="_blank">
-                  <BsGithub size={30} color="white" />
+              {/* Social Icons Container */}
+              <div className="flex gap-4 items-center justify-center w-full sm:w-auto">
+                <a
+                  href="https://github.com/nipaayasha05"
+                  target="_blank"
+                  rel="noreferrer"
+                  className=" border border-slate-800/60  hover:text-blue-400 hover:border-blue-500/50 transition-all duration-300 shadow-md flex items-center justify-center target-baseline bg-blue-500/10 p-3 rounded-xl text-blue-400"
+                >
+                  <BsGithub size={22} />
                 </a>
                 <a
                   href="https://www.linkedin.com/in/mstayashaakter/"
                   target="_blank"
+                  rel="noreferrer"
+                  className="  border border-slate-800/60  hover:text-blue-400 hover:border-blue-500/50 transition-all duration-300 shadow-md flex items-center justify-center target-baseline bg-blue-500/10 p-3 rounded-xl text-blue-400"
                 >
-                  <BsLinkedin size={30} color="white" />
+                  <BsLinkedin size={22} />
                 </a>
               </div>
             </div>
           </div>
-          <div className="flex- flex items-center justify-center">
-            <img
-              className="w-[250px] h-[250px] rounded-full border-2 border-sky-100/40  bg-amber/5 backdrop-blur-md shadow-l p-2 "
-              src={image}
-              alt=""
-            />
+
+          {/* Right Image Column (Creative Profile Wrapper) */}
+          <div className="lg:col-span-5 flex items-center justify-center relative">
+            {/* Background geometric design structures */}
+            <div className="absolute -inset-4 rounded-[2rem] border border-slate-800/40 bg-gradient-to-b from-slate-900/20 to-transparent -rotate-3 pointer-events-none" />
+            <div className="absolute -inset-4 rounded-[2rem] border border-slate-800/20 bg-gradient-to-t from-slate-900/10 to-transparent rotate-3 pointer-events-none" />
+
+            {/* Main Interactive Frame */}
+            <div className="relative group p-4 rounded-2xl bg-slate-900/40 border border-slate-800 backdrop-blur-md transition-all duration-500 hover:border-cyan-500/30 hover:shadow-[0_0_50px_rgba(6,182,212,0.1)]">
+              {/* Top-Right Neon Tech Bracket Accent */}
+              <div className="absolute top-0 right-0 w-8 h-8 border-t-2 border-r-2 border-cyan-500/40 rounded-tr-xl pointer-events-none group-hover:border-cyan-400 transition-colors" />
+              {/* Bottom-Left Neon Tech Bracket Accent */}
+              <div className="absolute bottom-0 left-0 w-8 h-8 border-b-2 border-l-2 border-cyan-500/40 rounded-bl-xl pointer-events-none group-hover:border-cyan-400 transition-colors" />
+
+              <img
+                className="w-[260px] h-[260px] md:w-[280px] md:h-[280px] lg:w-[320px] lg:h-[320px] rounded-xl object-cover grayscale-0 filter transition-all duration-700"
+                src={image}
+                alt="Ayasha Akter Portfolio Portrait"
+              />
+            </div>
           </div>
         </div>
       </div>

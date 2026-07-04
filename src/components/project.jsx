@@ -1,33 +1,50 @@
-import React, { useEffect } from "react";
-import { Link, useNavigate } from "react-router";
+import React from "react";
+import { Link } from "react-router";
 
 const Project = ({ project }) => {
-  const navigate = useNavigate();
-  useEffect(() => {
-    document.title = "Portfolio";
-  }, []);
-  // console.log(ava);
   return (
-    <div className="card m-5 bg-linear-to-r from-gray-800 to-slate-700 transform transition duration-300 hover:scale-105  text-sky-100  shadow-md">
-      <figure className="rounded-xl">
+    <div className="group flex h-full flex-col overflow-hidden rounded-2xl border border-slate-700 bg-[#111827] transition-all duration-300 hover:-translate-y-2  hover:border-cyan-400/40">
+      {/* Project Image */}
+      <div className="overflow-hidden">
         <img
-          className="w-full  pt-5 pr-5 pl-5 h-[280px] transform transition duration-300 hover:scale-105  "
           src={project.projectImage}
+          alt={project.projectName}
+          className="h-52 w-full object-cover p-1 rounded-t-xl"
         />
-      </figure>
-      <div className="card-body bg-linear-to-r from-slate-800 to-slate-700 rounded-b-md">
-        <h2 className="card-title text-transparent bg-clip-text bg-gradient-to-r from-blue-400  to-blue-300 text-2xl font-bold  ">
+      </div>
+
+      {/* Content */}
+      <div className="flex flex-1 flex-col p-4">
+        {/* Accent */}
+        {/* <div className="mb-5 h-1 w-1 rounded-full bg-sky-400 transition-all duration-300 group-hover:w-20"></div> */}
+
+        {/* Title */}
+        <h2 className="text-2xl font-bold text-blue-200">
           {project.projectName}
         </h2>
-        <p className="  sm:text-lg">{project.shortDescription}</p>
 
-        <div className="card-actions justify-end">
+        {/* Description */}
+        <p className="mt-2 flex-1 text-base leading-7 text-slate-300">
+          {project.sentence}
+        </p>
+
+        {/* Footer */}
+        <div className="flex items-center justify-between">
+          {/* Small Tag */}
+          {/* <span className="rounded-full border border-sky-500/30 bg-sky-500/10 px-3 py-1 text-xs font-medium text-sky-300">
+            Featured
+          </span> */}
+
+          {/* Button */}
           <Link
             to={`/project-details/${project.id}`}
-            // onClick={() => navigate(`/project-details/${project.id}`)}
-            className="btn hover:from-blue-500 hover:to-blue-500 border-none focus:outline-none focus:shadow-none outline-none shadow-none text-white btn-block bg-gradient-to-r from-blue-500  to-blue-400"
+            className="group mt-6 text-center rounded-lg bg-gradient-to-r from-sky-500 to-blue-600 px-5 py-2 text-white transition hover:scale-105 w-full"
+            // onClick={() => setSelectedProject(project)}
           >
-            View More
+            View Details{" "}
+            <span className="inline-block transition-transform duration-300 group-hover:translate-x-2 group-hover:scale-125">
+              →
+            </span>
           </Link>
         </div>
       </div>

@@ -1,12 +1,16 @@
+import { Toaster } from "react-hot-toast";
 import "./App.css";
+import Navbar from "./components/Navbar";
+import Home from "./components/Home";
+import Footer from "./layout/Footer";
 
 function App() {
   return (
-    <>
-      {" "}
-      <h1 className="btn btn-primary text-3xl">Vite + React wdwrdw</h1>
-      <p>rewtrer</p>
-    </>
+    <div>
+      <Navbar />
+      <Home />
+      <Footer />
+    </div>
   );
 }
 

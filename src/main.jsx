@@ -3,16 +3,11 @@ import { createRoot } from "react-dom/client";
 import "./index.css";
 import App from "./App.jsx";
 
+import { Toaster } from "react-hot-toast";
 import { createBrowserRouter, RouterProvider } from "react-router";
-import Home from "./components/Home.jsx";
 import MainLayout from "./layout/MainLayout.jsx";
-import About from "./components/About.jsx";
-import Resume from "./components/Resume.jsx";
-import Contact from "./components/Contact.jsx";
-import Projects from "./components/Projects.jsx";
 import ProjectDetails from "./components/ProjectDetails.jsx";
-import Skills from "./components/Skills.jsx";
-import Education from "./components/Education.jsx";
+import Home from "./components/Home.jsx";
 
 const router = createBrowserRouter([
   {
@@ -24,33 +19,9 @@ const router = createBrowserRouter([
         Component: Home,
       },
       {
-        path: "about",
-        Component: About,
-      },
-      {
-        path: "resume",
-        Component: Resume,
-      },
-      {
-        path: "contact",
-        Component: Contact,
-      },
-      {
-        path: "projects",
-        Component: Projects,
-      },
-      {
-        path: "skills",
-        Component: Skills,
-      },
-      {
         path: "project-details/:id",
         Component: ProjectDetails,
         loader: () => fetch("/projects.json"),
-      },
-      {
-        path: "education",
-        Component: Education,
       },
     ],
   },
@@ -59,5 +30,5 @@ const router = createBrowserRouter([
 createRoot(document.getElementById("root")).render(
   <StrictMode>
     <RouterProvider router={router}></RouterProvider>
-  </StrictMode>
+  </StrictMode>,
 );

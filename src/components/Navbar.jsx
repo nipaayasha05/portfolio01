@@ -1,166 +1,120 @@
 import React from "react";
-import { Link, NavLink } from "react-router";
+import { Link, Link as ScrollLink } from "react-scroll";
+import { useLocation, useNavigate } from "react-router";
 
 const Navbar = () => {
-  const links = (
-    <>
-      <li>
-        <NavLink
-          to="/"
-          className={({ isActive }) =>
-            isActive
-              ? "border-b-1   border-b-gray-300  sm:text-lg text-sky-100"
-              : "sm:text-lg text-sky-100"
-          }
-        >
-          Home
-        </NavLink>
-      </li>
-      <li>
-        <NavLink
-          to="/about"
-          className={({ isActive }) =>
-            isActive
-              ? "border-b-1   border-b-gray-300  sm:text-lg text-sky-100"
-              : "sm:text-lg text-sky-100"
-          }
-        >
-          About
-        </NavLink>
-      </li>
-      <li>
-        <NavLink
-          to="/skills"
-          className={({ isActive }) =>
-            isActive
-              ? "border-b-1   border-b-gray-300  sm:text-lg text-sky-100"
-              : "sm:text-lg text-sky-100"
-          }
-        >
-          Skills
-        </NavLink>
-      </li>
-      <li>
-        <NavLink
-          to="/education"
-          className={({ isActive }) =>
-            isActive
-              ? "border-b-1   border-b-gray-300  sm:text-lg text-sky-100"
-              : "sm:text-lg text-sky-100"
-          }
-        >
-          Education
-        </NavLink>
-      </li>
+  const location = useLocation();
+  const navigate = useNavigate();
 
-      <>
-        <li>
-          <NavLink
-            to="/projects"
-            className={({ isActive }) =>
-              isActive
-                ? "border-b-1   border-b-gray-300 sm:text-lg text-sky-100"
-                : "sm:text-lg text-sky-100"
-            }
-          >
-            Projects
-          </NavLink>
-        </li>
-        <li>
-          <NavLink
-            to="/contact"
-            className={({ isActive }) =>
-              isActive
-                ? "border-b-1   border-b-gray-300 sm:text-lg  text-sky-100"
-                : "sm:text-lg text-sky-100"
-            }
-          >
-            Contact
-          </NavLink>
-        </li>
-      </>
-    </>
-  );
+  const navItems = [
+    { to: "home", label: "Home" },
+    { to: "about", label: "About" },
+    { to: "skills", label: "Skills" },
+    { to: "education", label: "Education" },
+    { to: "projects", label: "Projects" },
+    { to: "contact", label: "Contact" },
+  ];
+
+  const handleClick = (section) => {
+    navigate(`/#${section}`);
+  };
 
   return (
-    <div className="navbar h-20   top-0 fixed text-white  bg-gray-900 shadow-lg  2 border-gray-600 z-10 ">
-      <div className="flex  container mx-auto justify-between max-w-6xl  ">
-        <div className="navbar-start   ">
-          {/* <div className="dropdown ">
-            <div tabIndex={0} role="button" className="    lg:hidden ">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                className="h-5 w-5"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-              >
-                {" "}
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth="2"
-                  d="M4 6h16M4 12h8m-8 6h16"
-                />{" "}
-              </svg>
-            </div>
-            <ul
-              tabIndex={0}
-              className="menu menu-sm bg-gray-900 dropdown-content  rounded-box z-1 mt-3 w-52 p-2 shadow  "
+    <div className="w-full top-0 fixed text-white bg-gray-950 shadow-lg border-b-2 border-gray-600 z-50">
+      <div className="container h-20 mx-auto max-w-7xl px-6 flex items-center justify-between">
+        <div className="navbar-start">
+          {location.pathname === "/" ? (
+            <ScrollLink
+              to="home"
+              smooth
+              offset={-100}
+              duration={500}
+              className="text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-blue-300 cursor-pointer"
             >
-              {links}
-            </ul>
-          </div>  */}
-          <Link
-            to="/"
-            className="text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-400  to-blue-300"
-          >
-            Ayasha
-          </Link>
+              Ayasha
+            </ScrollLink>
+          ) : (
+            <button
+              onClick={() => handleClick("home")}
+              className="text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-blue-300 cursor-pointer"
+            >
+              Ayasha
+            </button>
+          )}
         </div>
-        {/* <div className="navbar-center hidden lg:flex md:flex  font-semibold">
-          <ul className="menu menu-horizontal px-1  ">{links}</ul>
-        </div> */}
 
-        <div className="navbar-end">
-          <div className="navbar-center hidden lg:flex md:flex  font-semibol">
-            <ul className="menu menu-horizontal px-1  ">{links}</ul>
-          </div>
-          <div className="dropdown dropdown-end ">
-            <div
-              tabIndex={0}
-              role="button"
-              className="    lg:hidden md:hidden "
+        <ul className="hidden md:flex gap-8">
+          {navItems.map((item) => (
+            <li key={item.to}>
+              {location.pathname === "/" ? (
+                <ScrollLink
+                  to={item.to}
+                  spy
+                  smooth
+                  offset={-100}
+                  duration={500}
+                  className="relative text-sm uppercase tracking-widest transition-all duration-300 cursor-pointer text-slate-400 hover:text-white"
+                  activeClass="text-white font-bold"
+                >
+                  {item.label}
+                </ScrollLink>
+              ) : (
+                <button
+                  onClick={() => handleClick(item.to)}
+                  className="relative text-sm uppercase tracking-widest transition-all duration-300 cursor-pointer text-slate-400 hover:text-white"
+                >
+                  {item.label}
+                </button>
+              )}
+            </li>
+          ))}
+        </ul>
+
+        <div className="md:hidden dropdown dropdown-end">
+          <label tabIndex={0} className="p-2 cursor-pointer text-white">
+            <svg
+              className="h-6 w-6"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
             >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                className="h-5 w-5"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-              >
-                {" "}
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth="2"
-                  d="M4 6h16M4 12h8m-8 6h16"
-                />{" "}
-              </svg>
-            </div>
-            <ul
-              tabIndex={0}
-              className="menu menu-sm bg-gray-900 dropdown-content  rounded-box z-1 mt-3 w-52 p-2 shadow  "
-            >
-              {links}
-            </ul>
-          </div>
-          {/* <NavLink
-            to="/resume"
-            className="btn hover:from-violet-700 hover:to-fuchsia-500 text-white bg-gradient-to-r from-violet-500 border-none to-fuchsia-400"
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="2"
+                d="M4 6h16M4 12h8m-8 6h16"
+              />
+            </svg>
+          </label>
+          <ul
+            tabIndex={0}
+            className="menu menu-sm dropdown-content mt-3 w-52 p-4 bg-gray-950 border border-white/10 rounded-2xl shadow-2xl"
           >
-            Resume
-          </NavLink> */}
+            {navItems.map((item) => (
+              <li key={item.to}>
+                {location.pathname === "/" ? (
+                  <ScrollLink
+                    to={item.to}
+                    spy
+                    smooth
+                    offset={-70}
+                    duration={500}
+                    className="text-white hover:bg-white/5"
+                    activeClass="bg-white/10"
+                  >
+                    {item.label}
+                  </ScrollLink>
+                ) : (
+                  <button
+                    onClick={() => handleClick(item.to)}
+                    className="w-full text-left text-white hover:bg-white/5 px-4 py-2"
+                  >
+                    {item.label}
+                  </button>
+                )}
+              </li>
+            ))}
+          </ul>
         </div>
       </div>
     </div>

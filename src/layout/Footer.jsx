@@ -4,7 +4,7 @@ import { BsGithub, BsLinkedin } from "react-icons/bs";
 const Footer = () => {
   return (
     <div className="bg-slate-800 ">
-      <footer className="footer sm:footer-horizontal bg-slate-800 text-neutral-content items-center p-4 container mx-auto">
+      <footer className="footer sm:footer-horizontal bg-slate-800 text-neutral-content items-center p-6 max-w-7xl mx-auto px-4">
         <aside className="grid-flow-col items-center">
           <p>Ayasha | Fronted Developer</p>
         </aside>

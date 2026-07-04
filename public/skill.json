@@ -2,51 +2,73 @@
   {
     "id": 1,
     "name": "React",
-    "logoUrl": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original-wordmark.svg"
+    "category": "Frontend",
+    "logoUrl": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg"
   },
   {
     "id": 2,
     "name": "JavaScript",
-    "logoUrl": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg"
+    "category": "Frontend",
+    "logoUrl": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"
   },
   {
     "id": 3,
     "name": "Tailwind CSS",
-    "logoUrl": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg"
+    "category": "Frontend",
+    "logoUrl": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg"
   },
   {
     "id": 4,
     "name": "CSS3",
-    "logoUrl": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original-wordmark.svg"
+    "category": "Frontend",
+    "logoUrl": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg"
   },
   {
     "id": 5,
     "name": "HTML5",
-    "logoUrl": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original-wordmark.svg"
+    "category": "Frontend",
+    "logoUrl": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg"
   },
   {
     "id": 6,
-    "name": "MongoDB",
-    "logoUrl": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mongodb/mongodb-original-wordmark.svg"
+    "name": "Next.js",
+    "category": "Frontend",
+    "logoUrl": "https://cdn.simpleicons.org/nextdotjs/FFFFFF"
   },
   {
     "id": 7,
-    "name": "Firebase",
-    "logoUrl": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/firebase/firebase-plain.svg"
+    "name": "TypeScript",
+    "category": "Frontend",
+    "logoUrl": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg"
   },
   {
     "id": 8,
-    "name": "Node.js",
-    "logoUrl": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nodejs/nodejs-original-wordmark.svg"
+    "name": "MongoDB",
+    "category": "Backend",
+    "logoUrl": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg"
   },
   {
     "id": 9,
-    "name": "Express.js",
-    "logoUrl": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/express/express-original-wordmark.svg"
+    "name": "Node.js",
+    "category": "Backend",
+    "logoUrl": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg"
   },
   {
     "id": 10,
-    "name": "Next.js",
-    "logoUrl": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nextjs/nextjs-original-wordmark.svg"
+    "name": "Express.js",
+    "category": "Backend",
+    "logoUrl": "https://cdn.simpleicons.org/express/FFFFFF"
+  },
+  {
+    "id": 11,
+    "name": "Firebase",
+    "category": "Tools",
+    "logoUrl": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/firebase/firebase-plain.svg"
+  },
+  {
+    "id": 12,
+    "name": "GitHub",
+    "category": "Tools",
+    "logoUrl": "https://cdn.simpleicons.org/github/FFFFFF"
   }
 ]
