@@ -9,7 +9,11 @@ const Project = ({ project }) => {
         <img
           src={project.projectImage}
           alt={project.projectName}
-          className="h-52 w-full object-cover p-1 rounded-t-xl"
+          loading="lazy"
+          decoding="async"
+          width="600"
+          height="400"
+          className="h-56 w-full object-cover p-1 rounded-t-xl"
         />
       </div>
 

@@ -1,6 +1,140 @@
 [
+  
+{
+  "id": 1,
+  "projectName": "FixItNow",
+  "project": "Home Service Marketplace",
+  "sentence": "A full-stack home service marketplace built with Next.js, featuring role-based dashboards, service booking, and secure Stripe payments.",
+  "briefDescription": "FixItNow is a home service marketplace where customers can browse services, find technicians, book services, and make payments securely through Stripe. Technicians can manage their profiles, services, availability, and bookings, while administrators manage users and service categories.",
+  "projectImage": "https://i.ibb.co.com/DHWhKDQ8/fix-It-Now-Image.png",
+  "detailsPageUrl": "https://fix-it-now-frontend-amber.vercel.app/",
+  "mainTechnologyStack": [
+    "Next.js",
+    "React",
+    "TypeScript",
+    "Tailwind CSS",
+    "shadcn/ui",
+    "React Hook Form",
+    "Zod",
+    "Server Components",
+    "Server Actions",
+    "Fetch API",
+    "JWT",
+    "HTTP-only Cookies",
+    "Next.js Middleware",
+    "Stripe"
+  ],
+  "shortDescription": "FixItNow is a home service marketplace with customer, technician, and admin dashboards. It supports service discovery, bookings, technician management, reviews, and secure Stripe payment integration.",
+  "liveProjectLink": "https://fix-it-now-frontend-amber.vercel.app/",
+  "githubClientLink": "https://github.com/nipaayasha05/fix_it_now_frontend",
+  "githubServerLink": "",
+  "features": [
+    "User registration and login with JWT authentication",
+    "Protected routes using Next.js Middleware",
+    "Role-based navigation and dashboards",
+    "Browse, search, and filter home services",
+    "View technician profiles and service details",
+    "Book services and manage bookings",
+    "Stripe Checkout integration for secure payments",
+    "View payment history and payment status pages",
+    "Submit service reviews",
+    "Technician profile and service management",
+    "Technician availability and booking status management",
+    "Admin dashboard for user status and category management",
+    "Responsive design for different screen sizes",
+    "Skeleton loading states and toast notifications",
+    "Optimized images using the Next.js Image component"
+  ],
+  "challengesFaced": [
+    "Implementing JWT authentication with HTTP-only cookies",
+    "Protecting routes and displaying dashboards according to user roles",
+    "Integrating the frontend with backend APIs for services, bookings, and reviews",
+    "Managing service booking workflows and booking status updates",
+    "Integrating Stripe Checkout and handling payment success and cancellation states",
+    "Handling loading states and errors to improve the user experience"
+  ],
+  "potentialImprovements": [
+    "Add real-time notifications for booking updates",
+    "Introduce advanced search and service filtering options",
+    "Add analytics and reports for technicians and administrators",
+    "Improve technician availability management",
+    "Add real-time communication between customers and technicians"
+  ]
+},
+
+{
+  "id": 2,
+  "projectName": "Taskora",
+  "project": "Project Management SaaS",
+  "sentence": "A project management SaaS application with organization-based workspaces, role-based access control, and sprint-based task management.",
+  "briefDescription": "Taskora is a project management application that helps organizations manage teams, projects, sprints, and tasks in one place. It provides role-based workspaces, organization and team management, project collaboration, and structured task tracking.",
+  "projectImage": "https://i.ibb.co.com/5xRzrF55/taskora-Image.png",
+  "detailsPageUrl": "https://taskora-frontend-green.vercel.app/",
+  "mainTechnologyStack": [
+    "Next.js",
+    "React",
+    "TypeScript",
+    "Tailwind CSS",
+    "shadcn/ui",
+    "TanStack Query",
+    "TanStack Form",
+    "Zod",
+    "ofetch",
+    "Next Themes",
+    "Sonner",
+    "Lucide React",
+    "Google OAuth",
+    "Server Components",
+    "Server Actions"
+  ],
+  "shortDescription": "Taskora is a project management SaaS application that enables organizations to manage members, teams, projects, sprints, tasks, and subtasks through role-based workspaces and dashboards.",
+  "liveProjectLink": "https://taskora-frontend-green.vercel.app/",
+  "githubClientLink": "https://github.com/nipaayasha05/Taskora-frontend",
+  "githubServerLink": "https://github.com/nipaayasha05/Taskora-backend",
+  "features": [
+    "Email and password authentication",
+    "Google OAuth authentication",
+    "Protected routes for authenticated users",
+    "Role-based access control and dashboards",
+    "User profile management",
+    "Create and manage organizations",
+    "Organization approval workflow",
+    "View organization members and manage invitations",
+    "Invite users and manage member roles",
+    "Create teams and manage team members",
+    "Create projects within organizations",
+    "Assign clients and team members to projects",
+    "Organize project work into sprints",
+    "Manage tasks and subtasks",
+    "Track task statuses and priorities",
+    "Role-specific dashboards for admins, organization owners, managers, and team members",
+    "API data fetching and server-state management using TanStack Query",
+    "Query invalidation to refresh data after mutations",
+    "Responsive user interface with theme management",
+    "Toast notifications for user feedback"
+  ],
+  "challengesFaced": [
+    "Designing organization-based workspaces with multiple levels of access",
+    "Managing role-based permissions across admins, organization owners, managers, and team members",
+    "Structuring organization, team, project, sprint, task, and subtask workflows",
+    "Integrating frontend features with backend REST APIs",
+    "Managing server state, loading states, and API errors using TanStack Query",
+    "Keeping displayed data updated after create, update, and delete operations",
+    "Implementing email/password and Google OAuth authentication flows"
+  ],
+  "potentialImprovements": [
+    "Add more detailed sprint progress tracking",
+    "Improve project activity history and audit logs",
+    "Introduce analytics and reporting dashboards",
+    "Add real-time team collaboration and notifications",
+    "Improve task filtering, sorting, and search",
+    "Add more advanced project planning and workload management features"
+  ]
+},
+
+
   {
-    "id": 1,
+    "id": 3,
     "projectName": "MediCart",
     "project": "Multi-Vendor Medicine E-commerce Platform",
     "sentence": "A full-stack MERN medicine marketplace with role-based dashboards and secure Stripe payments.",
@@ -52,7 +186,7 @@
     ]
   },
   {
-    "id": 2,
+    "id": 4,
     "projectName": "FleetGo",
     "project": "Car Rental Platform",
     "sentence": "A full-stack car rental platform with online booking, reservation management, and real-time availability.",
@@ -96,7 +230,7 @@
     ]
   },
   {
-    "id": 3,
+    "id": 5,
     "projectName": "GreenSpire",
     "project": "Gardening Blog Platform",
     "sentence": "A community-driven gardening platform for sharing blogs, discovering gardeners, and exploring plant tips.",
